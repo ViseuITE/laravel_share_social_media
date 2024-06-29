@@ -51,11 +51,12 @@
                                 <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid mb-3">
                             @endif
                             <p><strong>Price:</strong> ${{ $product->price }}</p>
-
+                            
                             <table>
                                 <tr>
                                     <td>
-                                        {!! Share::page(url(`{{ asset('images/' . $product->image) }}`), $product->name)
+                                    <!-- {!! Share::page(url('images/' . $product->image), $product->name) -->
+                                    {!! Share::page(url('https://images.pexels.com/photos/26100664/pexels-photo-26100664/free-photo-of-a-young-male-deer.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'), $product->name)
                                         ->facebook()
                                         ->twitter()
                                         ->linkedin()
